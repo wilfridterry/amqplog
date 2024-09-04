@@ -36,6 +36,7 @@ func main() {
 		var msgLog domain.MessageLog 
 		if err := json.Unmarshal(msg.Body, &msgLog); err != nil {
 			log.Panic(err)
+			continue
 		}
 
 		fmt.Println(msgLog)
